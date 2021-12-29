@@ -1,0 +1,11 @@
+1.111.111-1,Pablo,Rios,109999,Ovalle
+1.111.111-2,Pablo1,Rios,200000,Coquimbo
+1.111.111-3,Pablo2,Rios,300000,Coquimbo
+1.111.111-4,Pablo3,Rios,400000,Ovalle
+1.111.111-5,Pablo4,Rios,500000,Santiago
+1.111.111-6,Pablo5,Rios,600000,Santiago
+1.111.111-7,Pablo6,Rios,700000,La Serena
+1.111.111-8,Pablo7,Rios,800000,Ovalle
+1.111.111-9,Pablo8,Rios,900000,La Serena
+1.111.111-0,Pablo9,Rios,1000000,Ovalle
+1.111.111-k,PabloK,Rios,1100000,Calama
