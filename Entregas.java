@@ -41,6 +41,22 @@ public class Entregas {
 		return true;
 	}
 	
+	public int getTotal() {
+		int j=0;
+		boolean primero = false;
+		if(first!=null) {
+			Nodo indice = first.getNext();
+			while(!primero) {
+				if(indice==first) {
+					primero=true;
+				}
+				j++;
+				indice=indice.getNext();
+			}
+		}
+		return j;
+	}
+	
 	public Nodo getElemto(int i) {
 		boolean primero = false;
 		Nodo indice = first.getNext();
