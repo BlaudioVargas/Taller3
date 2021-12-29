@@ -39,8 +39,10 @@ public class Sistema implements SistemaIMPL {
 
 	public Cliente searchCliente(String rut) {
 		int total = this.clientes.getTotal();
+		String rutA = decodificarRut(rut);
 		for(int i=0;i<total;i++) {
-			if(this.clientes.getItem(i).getRut().equals(rut)) {
+			String rutB = decodificarRut(this.clientes.getItem(i).getRut());
+			if(rutA.equals(rutB)) {
 				return this.clientes.getItem(i);
 			}
 		}
@@ -57,6 +59,56 @@ public class Sistema implements SistemaIMPL {
 
 	public Entregas getEntrega() {
 		return this.entregas;
+	}
+	
+	public static String decodificarRut(String rut) {//@return a simplified version of the rut
+		String[] partes;
+		partes = rut.split("");
+		if(partes.length==12)
+		{
+			if(partes[11].equals("k"))
+			{
+				partes[11]="K";
+			}
+			return partes[0]+partes[1]+partes[3]+partes[4]+partes[5]+partes[7]+partes[8]+partes[9]+partes[11];
+			
+		}
+		if(partes.length==11)
+		{
+			if(partes[10].equals("k"))
+			{
+				partes[10]="K";
+			}
+			return partes[0] + partes[2]+partes[3]+partes[4] + partes[6]+partes[7]+partes[8] +partes[10];
+		}
+		else if(partes.length==10)
+		{
+			if(partes[9].equals("k"))
+			{
+				partes[9]="K";
+			}
+			return partes[0]+partes[1]+partes[2]+partes[3]+partes[4]+partes[5]+partes[6]+partes[7]+partes[9];
+		}
+		else if(partes.length==9)
+		{
+			if(partes[8].equals("k"))
+			{
+				partes[8]="K";
+			}
+			return partes[0]+partes[1]+partes[2]+partes[3]+partes[4]+partes[5]+partes[6]+partes[7]+partes[8];
+		}
+		else if(partes.length==8)
+		{
+			if(partes[7].equals("k"))
+			{
+				partes[7]="K";
+			}
+			return partes[0]+partes[1]+partes[2]+partes[3]+partes[4]+partes[5]+partes[6]+partes[7];
+		}
+		else
+		{
+			return rut;
+		}
 	}
 
 }
