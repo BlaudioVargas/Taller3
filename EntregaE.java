@@ -22,7 +22,8 @@ public class EntregaE extends Entrega{
 	}
 
 	public String getEspecificaciones() {
-		return this.largo+"/"+this.ancho+"/"+this.profundidad;
+		return this.largo+","+this.ancho+","+this.profundidad;
 	}
 
 }
+
