@@ -23,4 +23,6 @@ public class Cliente {
 	public int getSaldo() {return this.saldo;}
 	public Local getCiuadad() {return this.ciuadad;}
 	public Entregas getEntregas() {return this.entregas;}
+	
+	public void addSaldo(int recarga) {this.saldo=this.saldo+recarga;}
 }
